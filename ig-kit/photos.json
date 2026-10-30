@@ -1,0 +1,9 @@
+{
+  "_rules": "Text-free photos only. Gemini sparkle mark already removed or sits in the cropped-away bottom. Add new photos as <name>.jpg plus an entry here. Never reuse a photo used in the last 4 posts (check 'Photos Used' in Notion).",
+  "family": {"tags": ["festival", "family", "diwali", "evening", "warm"], "desc": "Indian family gathering in a lit living room, festival evening", "use": "hook"},
+  "kitchen": {"tags": ["work", "home", "overwhelm", "woman", "festival"], "desc": "Woman juggling laptop and kitchen work during festive prep", "use": "hook"},
+  "balcony": {"tags": ["calm", "evening", "diya", "woman", "reflection"], "desc": "Woman on a balcony at dusk with diyas", "use": "message"},
+  "diya": {"tags": ["diya", "light", "festival", "calm", "close-up"], "desc": "Close-up of a lit diya, dark background", "use": "message"},
+  "bedroom-night": {"tags": ["night", "2am", "anxiety", "bed", "phone", "woman"], "desc": "Woman awake in bed at night, phone glow", "use": "hook"},
+  "hands-velvet": {"tags": ["tarot", "hands", "velvet", "daylight", "reading"], "desc": "Hands laying tarot cards on dark green velvet", "use": "message"}
+}
