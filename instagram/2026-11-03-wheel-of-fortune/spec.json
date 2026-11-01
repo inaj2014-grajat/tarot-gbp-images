@@ -1,0 +1,7 @@
+{"slug": "2026-11-03-wheel-of-fortune", "format": "reel", "card": "wheel-of-fortune", "source": "Google Flow Veo 3.1 Fast clip + local overlays (AI-generated video, AI label on)",
+ "slides": [
+  {"type": "hook", "name": "hook", "head": "ये सब कब तक चलेगा?", "sub": ""},
+  {"type": "detail", "name": "turn", "head": "Nothing stays the same forever.", "sub": ""},
+  {"type": "message", "name": "step", "quote": "अगला कदम तुम्हारा है।", "trans": "The next step is yours."},
+  {"type": "card", "name": "card", "title": "Wheel of Fortune", "sub": "The wheel is already turning.", "cta": "DM “CLARITY”", "line": "Charu can help you see what you can change today."}
+ ]}
