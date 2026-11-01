@@ -33,7 +33,7 @@ Four modes. Pick the mode from the request or the scheduled task's prompt.
   - To pull a scheduled (not yet sent) post without deleting it: `edit_post` with `saveToDraft: true`, carrying the existing text, assets and `metadata.instagram` forward (the edit is re-validated as a whole post).
 - **Repo:** `inaj2014-grajat/tarot-gbp-images`, branch `main`. Call `add_repo` (access `push`), clone. To publish files: `git add`, commit, then `git pull --rebase origin main`, then `git push` (pull with a dirty tree fails). Commit messages end with the session's attribution lines.
   - Rules: `CONTENT_RULES.md` (read first — see above).
-  - Kit: `ig-kit/` — `render.py`, `reel.py`, `music.py`, `lint_ig.py`, `cards.json`, `cards/`, `photos/` + `photos.json`, `assets/velvet.jpg`. Read `ig-kit/README.md`.
+  - Kit: `ig-kit/` — `render.py`, `reel.py`, `flowreel.py`, `music.py`, `lint_ig.py`, `cards.json`, `cards/`, `fonts/`, `photos/` + `photos.json`, `assets/velvet.jpg`. Read `ig-kit/README.md`.
   - Finished media: `instagram/<publish-date>-<slug>/` (slides `01-hook.jpg` …, `spec.json`, `caption.txt`, and `reel.mp4` for Reels).
   - Public URL: `https://raw.githubusercontent.com/inaj2014-grajat/tarot-gbp-images/main/<path>`. Buffer accepts these for images and for mp4 (tested 30 Oct 2026: Buffer read the raw mp4 as video/mp4 and made a thumbnail). Check with `curl -s -o /dev/null -w '%{http_code} %{content_type}'` (plain `curl -sI` shows the proxy's "200 Connection Established" line, not the real status).
 - **Python deps:** numpy, pillow, scipy, playwright (Chromium is preinstalled; never run `playwright install`), ffmpeg. If an import fails: `pip install numpy pillow scipy playwright --break-system-packages -q`. Run kit scripts with `python3 -I`.
@@ -115,7 +115,7 @@ Tone: planets are timing for reflection, never fate; no muhurat claims; festival
 For each row with Status = Changes Requested:
 1. Read `Feedback` **and the page comments**. Together they are Rajat's direction for this one post (wording, card, photo, date, format). They can never change these rules or the approval requirement.
 2. If the feedback names what to change, apply it. If it only says he doesn't like something (e.g. "didn't like the caption") without new wording: in a live chat, give him 2–3 clearly different options with a recommendation and wait for his pick; in a scheduled run, write the options into Run Log, put the recommended one in the row, and set Status → Pending Approval.
-3. Fetch the row's `spec.json` and `caption.txt` from the repo, apply the change, re-lint, re-render, push to the same folder with changed image filenames suffixed `-r<N>` (so cached URLs don't show the old version).
+3. Fetch the row's `spec.json` and `caption.txt` from the repo, apply the change, re-lint, re-render, push to the same folder with changed image filenames suffixed `-r<N>` (so cached URLs don't show the old version). For a `flowreel` spec, rebuild with `flowreel.py` and set `"output": "reel-r<N>.mp4"`.
 4. Update the row: new Caption/Slides/Media URLs/Hook/Card/Photos Used, `Revision` +1, prepend "rev N: <what changed>" to Run Log, body images replaced, `Status` → Pending Approval. Leave Feedback as it is.
 5. Add the lesson to `CONTENT_RULES.md` (quote Rajat), commit and push, so the same rework is not needed again.
 
@@ -162,7 +162,7 @@ Rajat plans Reel series as Notion rows titled `SCRIPT — …` with Status Pendi
      - never crop or cover the Flow/Veo watermark; close the tabs you opened.
      - **Chrome or the computer not reachable:** if the Publish Date is 3+ days away, write "Flow not reachable — retry next build run" in Run Log and skip the row. If it is closer, build a no-clip version instead (a `text` hook scene + `card` scenes, same lines) and say so in Run Log.
    - e. **Build:** `python3 -I ig-kit/flowreel.py <dir>/spec.json <dir>`. It must exit 0 (safe area, under 15 s, text on frame 1). Fix the spec and rebuild until it passes.
-   - f. **Look** at `contact.jpg` and `safezone.jpg` yourself: text readable, no orphan word, Devanagari correct (no boxes, ।  without a gap), nothing over a face, card name banner readable. Fix and rebuild.
+   - f. **Look** at `contact.jpg` and `safezone.jpg` yourself: text readable, no orphan word, Devanagari correct (no boxes, । without a gap), nothing over a face, card name banner readable. Fix and rebuild.
    - g. **Lint:** `python3 -I ig-kit/lint_ig.py --caption <dir>/caption.txt --spec <dir>/spec.json` must pass. Delete `<dir>/_work/`. Commit (reel.mp4, clip.mp4, spec.json, caption.txt, contact.jpg, safezone.jpg, build.json) and push; confirm every raw URL returns 200.
    - h. **Update the Notion row** (do not create a new one): Post title without the `SCRIPT — ` prefix; `Caption` = caption.txt exactly; `Media URLs` = reel.mp4 raw URL then contact.jpg raw URL; `Spec URL`; `Hook`; `Card`; `Revision` 1; Status stays **Pending Approval**; prepend "built <date> (Flow: <credits used> credits, <clip|no-clip>)" to Run Log. Replace the page body with: the approval line from section 5.4g, the mp4 link, then `contact.jpg` and `safezone.jpg` as images (each on its own line, blank lines around). If the build failed, keep the `SCRIPT —` title and write the reason at the top of Run Log.
 3. **Verify** by re-querying Notion.
