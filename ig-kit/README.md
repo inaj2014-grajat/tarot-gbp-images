@@ -7,6 +7,8 @@ Used by the `tarot-ig-publisher` skill. Everything renders in a cloud workspace 
 | `render.py spec.json OUT/` | Carousel or Reel slides, 1080x1350 JPEG, plus `contact.jpg` for review |
 | `reel.py OUT/ reel.mp4 [seed]` | 1080x1920 Reel from rendered slides, with an original synthesized track |
 | `music.py DUR CUTS out.wav [seed]` | Tanpura drone + pad + bells on each cut. No samples, no licensed audio |
+| `flowreel.py spec.json OUT/` | Series Reel from scenes (AI clip with timed text, chat bubbles, card end slides), fade-through-black, 2 s hold, brand music; checks the Instagram safe area, length and frame-1 text; writes `reel.mp4`, `contact.jpg`, `safezone.jpg`, `build.json` (exit 1 = do not publish) |
+| `fonts/` | Cinzel, Lora, Tiro Devanagari Hindi (OFL) used by `flowreel.py` |
 | `lint_ig.py --caption c.txt --spec s.json` | Instagram limits + brand rules. Exit 1 = do not publish |
 | `cards.json` | All 78 Rider-Waite (1909, public domain) cards → Hugging Face file |
 | `cards/` | Cached card scans (`<key>.jpg`). Fetch missing ones with hf_fs `attach` |

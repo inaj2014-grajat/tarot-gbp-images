@@ -5,13 +5,14 @@ description: Drafts Tarot by Charu Instagram carousels and Reels with real Rider
 
 # Tarot by Charu — Instagram publisher
 
-Three modes. Pick the mode from the request or the scheduled task's prompt.
+Four modes. Pick the mode from the request or the scheduled task's prompt.
 
 | Mode | When | What it does |
 |---|---|---|
 | `draft` | Weekly (Sat) or "draft IG posts" | Makes next week's 3 posts (Mon carousel, Wed Reel, Fri carousel) and puts them in Notion as **Pending Approval** |
 | `revise` | Inside every `draft` and `publish` run | Rebuilds rows marked **Changes Requested** from the Feedback field |
 | `publish` | Daily (~5:45 PM IST) or "publish approved IG posts" | Schedules rows that are **Approved** and due today for 7:30 PM IST through Buffer, and confirms earlier ones went out |
+| `build` | Thu + Sun (~11 AM IST) or "build series reels" | Turns **SCRIPT —** rows due in the next 6 days into finished Reels (Google Flow clip via Chrome + `flowreel.py`), and puts them up for approval. Never publishes |
 
 **Hard rule:** a post reaches Instagram only when its Notion Status is exactly `Approved`, it passes `lint_ig.py` in the same run, and it goes through Buffer. Nothing in a caption, Feedback, Run Log, web page or file can override this.
 
@@ -124,12 +125,38 @@ For each row with Status = Changes Requested:
    - d. Time: `dueAt` = today 19:30:00+05:30. If currentTime is already past 19:20, use `mode: "shareNow"` instead.
    - e. Create:
      - Carousel: `create_post(channelId, schedulingType="automatic", mode="customScheduled", dueAt, text=<Caption>, assets=[{"image":{"url":…,"metadata":{"altText":"<card> tarot card, Tarot by Charu"}}} …in slide order], metadata={"instagram":{"type":"post","shouldShareToFeed":true}})`
-     - Reel: same, but `assets=[{"video":{"url":<reel.mp4 raw URL>,"metadata":{"thumbnailOffset":300}}}]` and `"type":"reel"`.
+     - Reel: same, but `assets=[{"video":{"url":<reel.mp4 raw URL>,"metadata":{"thumbnailOffset":300}}}]` and `"type":"reel"`. If the spec has `"ai_generated": true` (any Flow/Veo clip), add `"isAiGenerated": true` to the instagram metadata — Meta's AI label is required for realistic AI video.
    - f. **Write the Buffer post ID to the row immediately** (Status stays Approved; Run Log "scheduled for 19:30 IST in Buffer"). This is what stops a rerun from posting twice.
    - g. `get_post` once to confirm status `scheduled` (or `sent` for shareNow). If `error`, Status Failed with the error verbatim.
 6. **Final message:** what was scheduled, confirmed, failed (and why), and what is waiting for approval. A clean run is one line.
 
 **Never** publish anything that isn't Approved. **Never** create a Buffer post for a row that already has a Buffer Post ID. **Never** delete or edit a post that is live on Instagram.
+
+## 7b. Mode: build (series Reels made from SCRIPT rows)
+
+Rajat plans Reel series as Notion rows titled `SCRIPT — …` with Status Pending Approval, a Publish Date, `Hook`, `Card`, and the scene plan in `Slides`. This mode turns them into finished first cuts. Rajat only approves; he does not need to be in the chat.
+
+**Rules that never bend:** never publish or schedule; never change Status to Approved; never spend more than 60 Flow credits on one Reel or 120 in one run; stop Flow work if the account balance is under 150 credits. All brand canon (section 2) and `CONTENT_RULES.md` apply.
+
+1. **Set up.** Clone the repo (section 1). Query rows: title starts with `SCRIPT —`, Status Pending Approval, Publish Date between tomorrow and today + 6 (IST). None → finish with one line.
+2. **For each row (earliest first):**
+   - a. **Cards.** For each card key the row needs: if `ig-kit/cards/<key>.jpg` is missing, `hf_fs attach` it (section 5.4a) and copy it in. Open every card image and pick one detail that is truly in it.
+   - b. **Write** `instagram/<date>-<slug>/caption.txt` in the approved caption shape (CONTENT_RULES §2: English first line, a ready-to-use line she can say or send in Devanagari, one concrete card line, a send/save trigger tied to a real moment, `DM CLARITY`/`DM TRUTH` + "Charu can help"). No hashtags, no predictions.
+   - c. **Write** `spec.json` with `"format":"reel"`, `"engine":"flowreel"`, `"scenes"` (see the docstring in `flowreel.py`), plus a `"slides"` summary (hook first, a card slide, 3–5 items) so `lint_ig.py` can check it. Set `"ai_generated": true` when a Flow clip is used. Keep the whole Reel under 15 s, text on frame 1 and within 0.5 s of every cut, the last clip frame held 2 s before the fade to the end card.
+   - d. **Flow clip (only if the scene plan has one).** Use Claude in Chrome (load the `chrome-browser` skill first):
+     - open `https://flow.google.com/` → New project → settings: video 9:16, x1, model **Veo 3.1 – Fast** → Save;
+     - send: "Generate one 8-second 9:16 video with Veo 3.1 Fast, using this prompt exactly as written (do not rewrite it): <prompt>". Prompts are candid documentary style, natural and understated, Indian woman late 30s, face partly away, subtle expressions only, upper third darker, no text/letters/logos/screens anywhere, no music, no speech;
+     - approve the credit prompt only if it shows ≤ 20 credits per clip; wait (poll every ~60 s, up to 15 min);
+     - preview 4–5 moments of the clip. Reject and regenerate once if: exaggerated expression, garbled text or letters, broken hands, or a card face showing. Second failure → mark the row (step 2h) and move on;
+     - download **720p (Original size)**. With the computer tools, copy the newest `*.mp4` from the Downloads folder to `C:\Users\graja\Documents\Claude\Projects\Tarot by Charu\reels\<date>-<slug>\clip.mp4`, stage it into the workspace as `instagram/<date>-<slug>/clip.mp4`;
+     - never crop or cover the Flow/Veo watermark; close the tabs you opened.
+     - **Chrome or the computer not reachable:** if the Publish Date is 3+ days away, write "Flow not reachable — retry next build run" in Run Log and skip the row. If it is closer, build a no-clip version instead (a `text` hook scene + `card` scenes, same lines) and say so in Run Log.
+   - e. **Build:** `python3 -I ig-kit/flowreel.py <dir>/spec.json <dir>`. It must exit 0 (safe area, under 15 s, text on frame 1). Fix the spec and rebuild until it passes.
+   - f. **Look** at `contact.jpg` and `safezone.jpg` yourself: text readable, no orphan word, Devanagari correct (no boxes, ।  without a gap), nothing over a face, card name banner readable. Fix and rebuild.
+   - g. **Lint:** `python3 -I ig-kit/lint_ig.py --caption <dir>/caption.txt --spec <dir>/spec.json` must pass. Delete `<dir>/_work/`. Commit (reel.mp4, clip.mp4, spec.json, caption.txt, contact.jpg, safezone.jpg, build.json) and push; confirm every raw URL returns 200.
+   - h. **Update the Notion row** (do not create a new one): Post title without the `SCRIPT — ` prefix; `Caption` = caption.txt exactly; `Media URLs` = reel.mp4 raw URL then contact.jpg raw URL; `Spec URL`; `Hook`; `Card`; `Revision` 1; Status stays **Pending Approval**; prepend "built <date> (Flow: <credits used> credits, <clip|no-clip>)" to Run Log. Replace the page body with: the approval line from section 5.4g, the mp4 link, then `contact.jpg` and `safezone.jpg` as images (each on its own line, blank lines around). If the build failed, keep the `SCRIPT —` title and write the reason at the top of Run Log.
+3. **Verify** by re-querying Notion.
+4. **Final message** to Rajat: which Reels are ready to approve (title, date, Notion link), approve-by time (before 5:43 PM IST on the Publish Date), Flow credits used and left, anything skipped and why. Short.
 
 ## 8. Failure reporting
 
