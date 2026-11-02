@@ -1,0 +1,47 @@
+{
+ "slug": "2026-11-09-four-of-wands",
+ "format": "carousel",
+ "card": "four-of-wands",
+ "slides": [
+  {
+   "type": "hook",
+   "name": "hook",
+   "photo": "wedding-mithai",
+   "head": "Cousin की शादी।\nबुआ बोलीं, “अब तुम्हारा नंबर।”",
+   "sub": "Today is for the mithai, not the questions.",
+   "head_px": 70
+  },
+  {
+   "type": "card",
+   "name": "card",
+   "title": "Four of Wands",
+   "sub": "The card of celebrating together."
+  },
+  {
+   "type": "detail",
+   "name": "garland",
+   "box": [
+    20,
+    560,
+    1125,
+    1580
+   ],
+   "fade": 100,
+   "label": "LOOK CLOSER",
+   "head": "Two people lifting flowers.",
+   "sub": "Everyone is celebrating.\nNobody is counting who's next.",
+   "head_px": 56
+  },
+  {
+   "type": "message",
+   "name": "message",
+   "photo": "wedding-terrace",
+   "layout": "bottom",
+   "quote": "तुम्हारी शादी। फ़ैसला क्या हो?",
+   "trans": "",
+   "line": "Charu से पूछो, ताकि तुम्हें पता हो।\nबस अपने लिये।",
+   "cta": "DM “TRUTH”",
+   "msg_label": "THE REAL QUESTION"
+  }
+ ]
+}

@@ -105,5 +105,30 @@
   ],
   "desc": "Woman in a green saree with a plate of mithai, talking to an older aunt at a wedding function. Google Flow, Nano Banana 2.1. Visible mark bottom right",
   "use": "hook"
+ },
+ "wedding-terrace": {
+  "tags": [
+   "wedding",
+   "woman",
+   "dusk",
+   "calm",
+   "alone",
+   "log-kya-kahenge"
+  ],
+  "desc": "Woman in a saree at a wedding terrace railing at dusk, hall lit behind her. Google Flow, Nano Banana 2.1. Visible mark bottom right",
+  "use": "message"
+ },
+ "chai-hands": {
+  "tags": [
+   "family",
+   "mother",
+   "hands",
+   "chai",
+   "tender",
+   "daylight",
+   "no-faces"
+  ],
+  "desc": "A younger hand resting on an older hand on a wooden table with two cups of chai, no faces. Google Flow, Nano Banana 2.1. Visible mark bottom right",
+  "use": "message"
  }
 }
