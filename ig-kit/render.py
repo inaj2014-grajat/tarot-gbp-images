@@ -204,7 +204,7 @@ def message_html(img, s, i, n):
     if s.get("layout") == "top":
         return f"""<img class="bg" src="{img}">{TOPDARK}{BRAND}{num(i, n)}
 <div style="position:absolute;top:130px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:18px;padding:0 90px;text-align:center">
-  <div class="label">THE CARD'S MESSAGE</div>
+  <div class="label">{s.get('msg_label', "THE CARD'S MESSAGE")}</div>
   <div class="it" style="font-size:50px;line-height:1.26;color:#F3EAD8">&ldquo;{q}&rdquo;</div>
   <div style="font-size:31px;line-height:1.4;color:#F5EEDF;text-shadow:0 2px 14px rgba(0,0,0,.8)">{tr}</div>
   <div class="rule" style="margin-top:8px"></div>
@@ -215,7 +215,7 @@ def message_html(img, s, i, n):
 <div class="ov" style="background:linear-gradient(180deg,rgba(0,0,0,0) 62%,rgba(4,8,6,.82) 80%,rgba(4,8,6,.94) 100%)"></div>
 <div id="scrim" class="ov"></div>{BRAND}{num(i, n)}
 <div id="msgtop" style="position:absolute;top:140px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:20px;padding:0 90px;text-align:center">
-  <div class="label">THE CARD'S MESSAGE</div>
+  <div class="label">{s.get('msg_label', "THE CARD'S MESSAGE")}</div>
   <div class="it" style="font-size:52px;line-height:1.28;color:#F3EAD8">&ldquo;{q}&rdquo;</div>
   <div style="font-size:31px;line-height:1.4;color:#F5EEDF;text-shadow:0 2px 14px rgba(0,0,0,.8)">{tr}</div>
 </div>
