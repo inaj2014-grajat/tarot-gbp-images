@@ -49,9 +49,11 @@ Avoid poetic metaphors about light, storms or shining. Be playful-warm and pract
 - He rejected "तुम्हारी रोशनी भी ज़रूरी है।" (an abstract metaphor) and chose "तुम्हारी ज़िंदगी, तुम्हारी रफ़्तार।"
 - So prefer short, punchy, parallel lines about her own life, choice or pace, over "your light / your glow" imagery.
 - Hindi is always in Devanagari, even single words. "zindagi" becomes ज़िंदगी.
+- Everyday English words stay in English, in Roman letters, even inside a Hindi line. Rajat rejected कज़िन: "I don't like cousin in Hindi. It's a common word so can be in English." So: "Cousin की शादी।"
 
 ## 4. Image text
 - Every word visible in an image must be correct and readable. That includes card names printed in base photos. If a card label in a photo is small or garbled, don't use that photo. A blur patch over it looks worse than the problem.
+- All text must be easy to read on a phone, above all the English line. Rajat on a slide where it sat on bright garlands: "English is barely readable." `render.py` now keeps text on a dark band and stops with READABILITY FAIL below 4.5:1 contrast (3:1 for large text). Fix the placement or photo; never lower the limit.
 - Label lines need proper punctuation, e.g. "A kind ‘no’ is still love." not "A kind no is still love". Quote a word when it is being said, and end a full sentence with a full stop.
 - Match the photo to the card when you can. A Card Insight post about Strength shouldn't show a different card if a better photo exists.
 

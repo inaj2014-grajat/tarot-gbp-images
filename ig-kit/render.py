@@ -152,18 +152,28 @@ TOPDARK = '<div class="ov" style="background:linear-gradient(180deg,rgba(4,6,5,.
 BRAND = '<div class="brand">TAROT BY CHARU</div>'
 
 
+def scrim_js(block, s):
+    """Dark band that follows the text block, so English is never on a bright part of the photo."""
+    if s.get("scrim", True) is False:
+        return ""
+    return ("<script>const b=document.getElementById('" + block + "').getBoundingClientRect().bottom;"
+            "document.getElementById('scrim').style.background="
+            "`linear-gradient(180deg,rgba(4,6,5,.86) 0,rgba(4,6,5,.82) ${b+24}px,rgba(4,6,5,0) ${b+170}px)`;</script>")
+
+
 def num(i, n):
     return f'<div class="num">{i} / {n}</div>'
 
 
 def hook_html(img, s, i, n):
-    return f"""<img class="bg" src="{img}">{TOPDARK}{BRAND}
-<div style="position:absolute;top:150px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:28px;padding:0 80px;text-align:center">
+    return f"""<img class="bg" src="{img}">{TOPDARK}<div id="scrim" class="ov"></div>{BRAND}
+<div id="hooktext" style="position:absolute;top:130px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:24px;padding:0 72px;text-align:center">
   <div class="h" style="font-size:{s.get('head_px', 86)}px;line-height:1.08">{t(s['head'])}</div>
   <div class="rule"></div>
-  <div class="it" style="font-size:42px;line-height:1.3">{t(s.get('sub', ''))}</div>
+  <div class="it" style="font-size:42px;line-height:1.3;font-style:normal;font-weight:500;color:#FBF5E8">{t(s.get('sub', ''))}</div>
 </div>
-<div style="position:absolute;bottom:58px;left:0;right:0;text-align:center" class="label swipe">SWIPE &nbsp;&rarr;</div>
+<div style="position:absolute;bottom:52px;left:0;right:0;text-align:center" class="swipe"><span class="label" style="background:rgba(4,6,5,.72);padding:14px 30px;border-radius:999px">SWIPE &nbsp;&rarr;</span></div>
+{scrim_js("hooktext", s)}
 <div class="grain"></div>"""
 
 
@@ -196,26 +206,72 @@ def message_html(img, s, i, n):
 <div style="position:absolute;top:130px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:18px;padding:0 90px;text-align:center">
   <div class="label">THE CARD'S MESSAGE</div>
   <div class="it" style="font-size:50px;line-height:1.26;color:#F3EAD8">&ldquo;{q}&rdquo;</div>
-  <div style="font-size:26px;line-height:1.45;color:rgba(230,215,186,.9);text-shadow:0 2px 14px rgba(0,0,0,.7)">{tr}</div>
+  <div style="font-size:31px;line-height:1.4;color:#F5EEDF;text-shadow:0 2px 14px rgba(0,0,0,.8)">{tr}</div>
   <div class="rule" style="margin-top:8px"></div>
   <div class="h" style="font-size:34px;line-height:1.25">{line}</div>
   {f'<div class="pill" style="font-size:26px;padding:16px 40px">{cta}</div>' if cta else ''}
 </div><div class="grain"></div>"""
     return f"""<img class="bg" src="{img}">{TOPDARK}
 <div class="ov" style="background:linear-gradient(180deg,rgba(0,0,0,0) 62%,rgba(4,8,6,.82) 80%,rgba(4,8,6,.94) 100%)"></div>
-{BRAND}{num(i, n)}
-<div style="position:absolute;top:140px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:20px;padding:0 90px;text-align:center">
+<div id="scrim" class="ov"></div>{BRAND}{num(i, n)}
+<div id="msgtop" style="position:absolute;top:140px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:20px;padding:0 90px;text-align:center">
   <div class="label">THE CARD'S MESSAGE</div>
   <div class="it" style="font-size:52px;line-height:1.28;color:#F3EAD8">&ldquo;{q}&rdquo;</div>
-  <div style="font-size:27px;line-height:1.45;color:rgba(230,215,186,.9);text-shadow:0 2px 14px rgba(0,0,0,.7)">{tr}</div>
+  <div style="font-size:31px;line-height:1.4;color:#F5EEDF;text-shadow:0 2px 14px rgba(0,0,0,.8)">{tr}</div>
 </div>
 <div style="position:absolute;bottom:72px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;padding:0 80px">
   <div class="h" style="font-size:38px;line-height:1.25">{line}</div>
   {f'<div class="pill">{cta}</div>' if cta else ''}
-</div><div class="grain"></div>"""
+</div>{scrim_js("msgtop", s)}<div class="grain"></div>"""
 
 
 BUILDERS = {"hook": hook_html, "card": card_html, "detail": detail_html, "message": message_html}
+
+
+READ_JS = """() => {
+  const out = [];
+  for (const el of document.querySelectorAll('body *')) {
+    if (el.closest('.pill,.brand,.num') || el.tagName === 'SCRIPT') continue;  // brand mark and slide counter are decoration
+    for (const n of el.childNodes) {
+      if (n.nodeType !== 3 || !n.textContent.trim()) continue;
+      const r = document.createRange(); r.selectNodeContents(n);
+      const b = r.getBoundingClientRect(), c = getComputedStyle(el);
+      out.push({text: n.textContent.trim().slice(0, 40), x: b.left, y: b.top, w: b.width, h: b.height,
+                color: c.color, size: parseFloat(c.fontSize)});
+    }
+  }
+  document.head.insertAdjacentHTML('beforeend', '<style>*{color:transparent!important;text-shadow:none!important}.pill{visibility:hidden}</style>');
+  return out;
+}"""
+
+
+def _lum(rgb):
+    def f(c):
+        c /= 255
+        return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+    return 0.2126 * f(rgb[0]) + 0.7152 * f(rgb[1]) + 0.0722 * f(rgb[2])
+
+
+def check_readable(pg, name):
+    """Contrast of each text line against the brightest 5% of the photo behind it.
+    Needs 4.5:1 for small text, 3:1 for text of 40 px and up (WCAG AA)."""
+    import io, re
+    items = pg.evaluate(READ_JS)
+    pg.wait_for_timeout(100)
+    bg = Image.open(io.BytesIO(pg.screenshot())).convert("RGB")
+    probs = []
+    for it in items:
+        box = (max(0, int(it["x"])), max(0, int(it["y"])), min(W, int(it["x"] + it["w"])), min(H, int(it["y"] + it["h"])))
+        if box[2] <= box[0] or box[3] <= box[1]:
+            continue
+        lums = sorted(_lum(px) for px in bg.crop(box).resize((60, 20)).getdata())
+        back = lums[int(len(lums) * 0.95)]
+        col = [float(v) for v in re.findall(r"[\d.]+", it["color"])][:3]
+        ratio = (_lum(col) + 0.05) / (back + 0.05)
+        need = 3.0 if it["size"] >= 40 else 4.5
+        if ratio < need:
+            probs.append(f"{name}: '{it['text']}' contrast {ratio:.1f}:1, needs {need}:1")
+    return probs
 
 
 def main():
@@ -252,12 +308,14 @@ def main():
         names.append(f"{i:02d}-{s.get('name', typ)}")
     from playwright.sync_api import sync_playwright
     outs = []
+    problems = []
     with sync_playwright() as p:
         b = p.chromium.launch(); pg = b.new_page(viewport={"width": W, "height": H})
         for i, nm in enumerate(names, 1):
             pg.goto(f"file://{work / f'{i:02d}.html'}"); pg.wait_for_timeout(900)
             png = work / f"{nm}.png"
             pg.screenshot(path=str(png))
+            problems += check_readable(pg, nm)
             out = outdir / f"{nm}.jpg"
             Image.open(png).convert("RGB").save(out, quality=92)
             outs.append(out); print(out)
@@ -269,6 +327,11 @@ def main():
         sheet.paste(im, (k * 444, 0))
     sheet.save(outdir / "contact.jpg", quality=88)
     print(outdir / "contact.jpg")
+    if problems:
+        print("READABILITY FAIL (fix the text placement or the photo, then re-render):")
+        for x in problems:
+            print(" -", x)
+        sys.exit(2)
 
 
 if __name__ == "__main__":
