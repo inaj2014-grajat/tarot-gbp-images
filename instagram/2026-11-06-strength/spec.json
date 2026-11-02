@@ -1,1 +1,47 @@
-{"slug": "2026-11-06-strength", "format": "carousel", "card": "strength", "slides": [{"type": "hook", "name": "hook", "photo": "window-chai", "head": "परिवार को ‘ना’ कहा।\nऔर अब गिल्ट?", "sub": "Saying no with love is still love.", "head_px": 82}, {"type": "card", "name": "card", "title": "Strength", "sub": "The card of gentle strength."}, {"type": "detail", "name": "hands", "box": [200, 750, 1000, 1350], "fade": 88, "label": "LOOK CLOSER", "head": "Gentle hands. A calm lion.", "sub": "No force, no fight.\nA soft no can still hold firm.", "head_px": 56}, {"type": "message", "name": "message", "photo": "diya", "layout": "bottom", "quote": "प्यार से कहा गया ‘ना’ भी प्यार ही है।", "trans": "A no said with love is still love.", "line": "इस दिवाली, खुद से भी नरमी रखो।", "cta": "DM “TRUTH”"}]}
+{
+ "slug": "2026-11-06-strength",
+ "format": "carousel",
+ "card": "strength",
+ "slides": [
+  {
+   "type": "hook",
+   "name": "hook",
+   "photo": "window-chai",
+   "head": "परिवार को ‘ना’ कहा।\nऔर अब गिल्ट?",
+   "sub": "Saying no with love is still love.",
+   "head_px": 82
+  },
+  {
+   "type": "card",
+   "name": "card",
+   "title": "Strength",
+   "sub": "The card of gentle strength."
+  },
+  {
+   "type": "detail",
+   "name": "hands",
+   "box": [
+    200,
+    750,
+    1000,
+    1350
+   ],
+   "fade": 88,
+   "label": "LOOK CLOSER",
+   "head": "Gentle hands. A calm lion.",
+   "sub": "No force, no fight.\nA soft no can still hold firm.",
+   "head_px": 56
+  },
+  {
+   "type": "message",
+   "name": "message",
+   "photo": "diya",
+   "layout": "bottom",
+   "quote": "ये गिल्ट रखना है, या छोड़ना?",
+   "trans": "",
+   "line": "Charu से पूछो, ताकि तुम्हें पता हो।\nबस अपने लिये।",
+   "cta": "DM “TRUTH”",
+   "msg_label": "THE REAL QUESTION"
+  }
+ ]
+}
