@@ -76,7 +76,7 @@ Every theme still ends on hope (`CONTENT_RULES.md` §1). The timely hook (sectio
 
 **Cards:** choose the card whose imagery truly fits the situation, preferring hope-carrying cards. Don't reuse a card within the last 12 rows, or a card + theme pair ever. Card keys are in `ig-kit/cards.json`.
 
-**Photos:** choose by tags in `photos.json`. Don't reuse a photo from the last 4 rows (`Photos Used`). Photos must be candid and understated (soft smile at most, no exaggerated expressions). If nothing fits or everything was used recently, get new text-free photos from the sources in `CONTENT_RULES.md` §7, never Creative Claw (one single photograph per request — multi-image requests come back as collages) and add them with tags; if generation isn't available, use the least recently used one and add to Run Log: "photo library small — please add text-free photos (portrait, Indian setting) to ig-kit/photos". Never use a photo with text, a logo, or a visible Gemini sparkle.
+**Photos:** choose by tags in `photos.json`. Don't reuse a photo from the last 4 rows (`Photos Used`). Photos must be candid and understated (soft smile at most, no exaggerated expressions). If nothing fits or everything was used recently, get new text-free photos from the sources in `CONTENT_RULES.md` §7, never Creative Claw (one single photograph per request — multi-image requests come back as collages) and add them with tags; if generation isn't available, use the least recently used one and add to Run Log: "photo library small — please add text-free photos (portrait, Indian setting) to ig-kit/photos". Never use a photo with text or a logo, or with an unnatural shimmer or glow. Gemini's small visible mark is allowed (`CONTENT_RULES.md` §7).
 
 **No repetition:** query the last 12 rows first. No repeated hook, quote, card, or detail.
 
@@ -135,7 +135,7 @@ For each row with Status = Changes Requested:
    - d. Time: `dueAt` = today 19:30:00+05:30. If currentTime is already past 19:20, use `mode: "shareNow"` instead.
    - e. Create:
      - Carousel: `create_post(channelId, schedulingType="automatic", mode="customScheduled", dueAt, text=<Caption>, assets=[{"image":{"url":…,"metadata":{"altText":"<card> tarot card, Tarot by Charu"}}} …in slide order], metadata={"instagram":{"type":"post","shouldShareToFeed":true}})`
-     - Reel: same, but `assets=[{"video":{"url":<reel.mp4 raw URL>,"metadata":{"thumbnailOffset":300}}}]` and `"type":"reel"`. If the spec has `"ai_generated": true` (any Flow/Veo clip), add `"isAiGenerated": true` to the instagram metadata — Meta's AI label is required for realistic AI video.
+     - Reel: same, but `assets=[{"video":{"url":<reel.mp4 raw URL>,"metadata":{"thumbnailOffset":300}}}]` and `"type":"reel"`. If the spec has `"ai_generated": true` (any Flow/Veo clip or AI photo, on a Reel or a carousel), add `"isAiGenerated": true` to the instagram metadata — Meta's AI label is required for realistic AI video.
    - f. **Write the Buffer post ID to the row immediately** (Status stays Approved; Run Log "scheduled for 19:30 IST in Buffer"). This is what stops a rerun from posting twice.
    - g. `get_post` once to confirm status `scheduled` (or `sent` for shareNow). If `error`, Status Failed with the error verbatim.
 6. **Final message:** what was scheduled, confirmed, failed (and why), and what is waiting for approval. A clean run is one line.

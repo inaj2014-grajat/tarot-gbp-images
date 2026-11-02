@@ -59,6 +59,7 @@ Avoid poetic metaphors about light, storms or shining. Be playful-warm and pract
 - Rajat wants varied photos, not the same look each week. When the library is thin, get new text-free ones from the sources in §7, and add them to `ig-kit/photos/` and `photos.json` with tags.
 - Use candid, natural, understated people: a soft smile at most, face turned partly away, real Indian homes and offices.
 - Rajat rejected an AI video with big laughing, over-the-top expressions as "completely fake… no one will watch it". Never use exaggerated expressions in photos or video.
+- No unnatural or artificial shimmer, glow or sparkle in photos and video. Rajat: "By sparkle I meant unnatural/artificial shimmer etc."
 - When generating a set of images, ask for "one single photograph, one continuous frame". Multi-image requests came back as low-resolution 3-panel collages.
 
 ## 6. How to handle Rajat's rework requests
@@ -81,7 +82,8 @@ Try these in order, and write the source used in Run Log.
 Rules for Flow:
 - Send the prompt with "using this prompt exactly as written". The Flow agent may not stop to confirm before generating, so check the settings first.
 - Download the file the same day. Flow warns that its oldest creations expire.
-- Never crop, cover or remove any watermark, on video or on images. If a downloaded image shows a visible mark, don't use it: go to the next source and note it in Run Log.
+- Flow images carry a small visible Gemini mark in India. Rajat allowed it on 2 Nov 2026. Never crop, cover or remove any watermark, on video or images. Keep slide text clear of it.
+- Set `"ai_generated": true` in the spec of any post using an AI photo made after 2 Nov 2026, so the post gets Instagram's AI label.
 - If Chrome or Flow can't be reached, move to the next source. Never call a different generation tool.
 
 ## 8. Draft with the craft skill (Rajat, 2 Nov 2026)
