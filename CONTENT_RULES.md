@@ -47,6 +47,7 @@ Avoid poetic metaphors about light, storms or shining. Be playful-warm and pract
 
 ## 3. Short Hindi lines (slide 4 closing line and similar)
 - He rejected "तुम्हारी रोशनी भी ज़रूरी है।" (an abstract metaphor) and chose "तुम्हारी ज़िंदगी, तुम्हारी रफ़्तार।"
+- For a wedding post (2 Nov sample) he rejected "जवाब बाद में। मिठाई पहले।" and chose "तुम्हारी शादी, तुम्हारा फ़ैसला।" Don't make a joke line the card's message.
 - So prefer short, punchy, parallel lines about her own life, choice or pace, over "your light / your glow" imagery.
 - Hindi is always in Devanagari, even single words. "zindagi" becomes ज़िंदगी.
 - Everyday English words stay in English, in Roman letters, even inside a Hindi line. Rajat rejected कज़िन: "I don't like cousin in Hindi. It's a common word so can be in English." So: "Cousin की शादी।"
