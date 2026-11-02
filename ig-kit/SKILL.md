@@ -135,7 +135,7 @@ For each row with Status = Changes Requested:
    - d. Time: `dueAt` = today 19:30:00+05:30. If currentTime is already past 19:20, use `mode: "shareNow"` instead.
    - e. Create:
      - Carousel: `create_post(channelId, schedulingType="automatic", mode="customScheduled", dueAt, text=<Caption>, assets=[{"image":{"url":…,"metadata":{"altText":"<card> tarot card, Tarot by Charu"}}} …in slide order], metadata={"instagram":{"type":"post","shouldShareToFeed":true}})`
-     - Reel: same, but `assets=[{"video":{"url":<reel.mp4 raw URL>,"metadata":{"thumbnailOffset":300}}}]` and `"type":"reel"`. If the spec has `"ai_generated": true` (any Flow/Veo clip or AI photo, on a Reel or a carousel), add `"isAiGenerated": true` to the instagram metadata — Meta's AI label is required for realistic AI video.
+     - Reel: same, but `assets=[{"video":{"url":<reel.mp4 raw URL>,"metadata":{"thumbnailOffset":300}}}]` and `"type":"reel"`. If the spec has `"ai_generated": true` (any Flow/Veo clip), add `"isAiGenerated": true` to the instagram metadata — Meta's AI label is required for realistic AI video.
    - f. **Write the Buffer post ID to the row immediately** (Status stays Approved; Run Log "scheduled for 19:30 IST in Buffer"). This is what stops a rerun from posting twice.
    - g. `get_post` once to confirm status `scheduled` (or `sent` for shareNow). If `error`, Status Failed with the error verbatim.
 6. **Final message:** what was scheduled, confirmed, failed (and why), and what is waiting for approval. A clean run is one line.

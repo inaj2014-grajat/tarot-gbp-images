@@ -1,5 +1,5 @@
 {
- "_rules": "Text-free photos only. Gemini's small visible mark is allowed (Rajat, 2 Nov 2026): never crop, cover or remove it, and keep slide text clear of it. No unnatural shimmer or glow. Set \"ai_generated\": true in the spec of any post using an AI photo made after 2 Nov 2026. Add new photos as <name>.jpg plus an entry here. Never reuse a photo used in the last 4 posts (check 'Photos Used' in Notion).",
+ "_rules": "Text-free photos only. Gemini's small visible mark is allowed (Rajat, 2 Nov 2026): never crop, cover or remove it, and keep slide text clear of it. No unnatural shimmer or glow. Add new photos as <name>.jpg plus an entry here. Never reuse a photo used in the last 4 posts (check 'Photos Used' in Notion).",
  "family": {
   "tags": [
    "festival",

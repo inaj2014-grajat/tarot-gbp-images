@@ -52,6 +52,15 @@ Avoid poetic metaphors about light, storms or shining. Be playful-warm and pract
 - Hindi is always in Devanagari, even single words. "zindagi" becomes ज़िंदगी.
 - Everyday English words stay in English, in Roman letters, even inside a Hindi line. Rajat rejected कज़िन: "I don't like cousin in Hindi. It's a common word so can be in English." So: "Cousin की शादी।"
 
+## 3a. The last slide must lead to Charu (Rajat, 2 Nov 2026)
+Rajat: "I am not sure how this is driving the viewer to Charu." So the last slide names Charu and gives a reason to message her. He also said its text was longer than he likes.
+
+Shape: one short Hindi line from the card, then the invitation, then the DM word. No separate closing line and no English translation on the slide. The caption carries the English.
+
+Default invitation, on DM TRUTH posts (his line, "Yes I like that line on last slide"):
+"Charu से पूछो, ताकि तुम्हें पता हो।" / "बस अपने लिये।"
+Caption form: "DM TRUTH to ask Charu, so that you know. Just for yourself."
+
 ## 4. Image text
 - Every word visible in an image must be correct and readable. That includes card names printed in base photos. If a card label in a photo is small or garbled, don't use that photo. A blur patch over it looks worse than the problem.
 - All text must be easy to read on a phone, above all the English line. Rajat on a slide where it sat on bright garlands: "English is barely readable." `render.py` now keeps text on a dark band and stops with READABILITY FAIL below 4.5:1 contrast (3:1 for large text). Fix the placement or photo; never lower the limit.
@@ -86,7 +95,7 @@ Rules for Flow:
 - Send the prompt with "using this prompt exactly as written". The Flow agent may not stop to confirm before generating, so check the settings first.
 - Download the file the same day. Flow warns that its oldest creations expire.
 - Flow images carry a small visible Gemini mark in India. Rajat allowed it on 2 Nov 2026. Never crop, cover or remove any watermark, on video or images. Keep slide text clear of it.
-- Set `"ai_generated": true` in the spec of any post using an AI photo made after 2 Nov 2026, so the post gets Instagram's AI label.
+- No per-post AI label is needed for AI photos. Rajat, 2 Nov 2026: the Instagram account is already labelled AI. Reels with an AI video clip keep their label as `ig-kit/SKILL.md` says.
 - If Chrome or Flow can't be reached, move to the next source. Never call a different generation tool.
 
 ## 8. Draft with the craft skill (Rajat, 2 Nov 2026)
