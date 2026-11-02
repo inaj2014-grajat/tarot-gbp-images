@@ -130,5 +130,29 @@
   ],
   "desc": "A younger hand resting on an older hand on a wooden table with two cups of chai, no faces. Google Flow, Nano Banana 2.1. Visible mark bottom right",
   "use": "message"
+ },
+ "friend-sangeet": {
+  "tags": [
+   "wedding",
+   "friend",
+   "woman",
+   "alone",
+   "evening",
+   "log-kya-kahenge"
+  ],
+  "desc": "Woman in a teal lehenga with a small plate, a little apart from friends around the bride at a sangeet. Google Flow, Nano Banana 2.1. Visible mark bottom right",
+  "use": "hook"
+ },
+ "friend-dupatta": {
+  "tags": [
+   "wedding",
+   "friend",
+   "bride",
+   "home",
+   "daylight",
+   "tender"
+  ],
+  "desc": "Friend in a teal lehenga gently adjusts a bride's red dupatta in a bright cream room, bride seen from behind. Google Flow, Nano Banana 2.1. Visible mark bottom right",
+  "use": "message"
  }
 }

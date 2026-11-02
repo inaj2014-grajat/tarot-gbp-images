@@ -1,0 +1,47 @@
+{
+ "slug": "2026-11-16-three-of-cups",
+ "format": "carousel",
+ "card": "three-of-cups",
+ "slides": [
+  {
+   "type": "hook",
+   "name": "hook",
+   "photo": "friend-sangeet",
+   "head": "उसकी शादी में खुश भी थी।\nऔर थोड़ा अकेली भी।",
+   "sub": "You can be happy for her and still feel it.",
+   "head_px": 70
+  },
+  {
+   "type": "card",
+   "name": "card",
+   "title": "Three of Cups",
+   "sub": "The card of friends celebrating together."
+  },
+  {
+   "type": "detail",
+   "name": "cups",
+   "box": [
+    250,
+    150,
+    900,
+    750
+   ],
+   "fade": 100,
+   "label": "LOOK CLOSER",
+   "head": "One cup is higher than the others.",
+   "sub": "The other two are still raising theirs.\nHer happiness takes nothing from yours.",
+   "head_px": 56
+  },
+  {
+   "type": "message",
+   "name": "message",
+   "photo": "friend-dupatta",
+   "layout": "bottom",
+   "quote": "उसकी हो गई। मेरी कब?",
+   "trans": "",
+   "line": "Charu से पूछो, ताकि तुम्हें पता हो।\nबस अपने लिये।",
+   "cta": "DM “TRUTH”",
+   "msg_label": "THE REAL QUESTION"
+  }
+ ]
+}

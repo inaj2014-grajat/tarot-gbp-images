@@ -97,6 +97,8 @@ Rules for Flow:
 - Flow images carry a small visible Gemini mark in India. Rajat allowed it on 2 Nov 2026. Never crop, cover or remove any watermark, on video or images. Keep slide text clear of it.
 - No per-post AI label is needed for AI photos. Rajat, 2 Nov 2026: the Instagram account is already labelled AI. Reels with an AI video clip keep their label as `ig-kit/SKILL.md` says.
 - If Chrome or Flow can't be reached, move to the next source. Never call a different generation tool.
+- Make the photos yourself. Rajat, 2 Nov 2026: "dont ask em for photos.. you should be doing it yourself." Ask him only if Chrome or Flow can't be reached.
+- Getting a Flow photo into the repo, with no download and no folder access: open the image in Flow and reload the page so it shows the 896x1200 `flow-content.google` file, not the 382x512 thumbnail. Put that image in a full-window overlay at natural size with page JavaScript. Capture it with the Chrome `zoom` action and `save_to_disk`, which keeps full pixels in a PNG; a plain screenshot is scaled down. The window showed 951 px, so take a second capture with the image moved up 249 px. Join the two, check the overlap matches, save as JPG in `ig-kit/photos/`, and remove the overlay.
 
 ## 8. Draft with the craft skill (Rajat, 2 Nov 2026)
 For Instagram draft, build and revise runs, load the `tarot-post-craft` skill and follow it for the hook, slides and caption. If it isn't installed, carry on without it and say so in Run Log. This file still wins over that skill.
