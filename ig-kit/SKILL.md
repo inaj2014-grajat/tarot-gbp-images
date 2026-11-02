@@ -76,7 +76,7 @@ Every theme still ends on hope (`CONTENT_RULES.md` §1). The timely hook (sectio
 
 **Cards:** choose the card whose imagery truly fits the situation, preferring hope-carrying cards. Don't reuse a card within the last 12 rows, or a card + theme pair ever. Card keys are in `ig-kit/cards.json`.
 
-**Photos:** choose by tags in `photos.json`. Don't reuse a photo from the last 4 rows (`Photos Used`). Photos must be candid and understated (soft smile at most, no exaggerated expressions). If nothing fits or everything was used recently, generate new text-free photos (one single photograph per request — multi-image requests come back as collages) and add them with tags; if generation isn't available, use the least recently used one and add to Run Log: "photo library small — please add text-free photos (portrait, Indian setting) to ig-kit/photos". Never use a photo with text, a logo, or a visible Gemini sparkle.
+**Photos:** choose by tags in `photos.json`. Don't reuse a photo from the last 4 rows (`Photos Used`). Photos must be candid and understated (soft smile at most, no exaggerated expressions). If nothing fits or everything was used recently, get new text-free photos from the sources in `CONTENT_RULES.md` §7, never Creative Claw (one single photograph per request — multi-image requests come back as collages) and add them with tags; if generation isn't available, use the least recently used one and add to Run Log: "photo library small — please add text-free photos (portrait, Indian setting) to ig-kit/photos". Never use a photo with text, a logo, or a visible Gemini sparkle.
 
 **No repetition:** query the last 12 rows first. No repeated hook, quote, card, or detail.
 
@@ -100,7 +100,7 @@ Tone: planets are timing for reflection, never fate; no muhurat claims; festival
 2. **Context.** Query the last 12 rows (theme, cards, photos, hooks). Run `revise` (section 6). Do the timely-hook research.
 3. **Dates.** Next Mon, Wed, Fri (IST). Skip a date that already has a non-Rejected row, so reruns are safe.
 4. **For each post:**
-   - a. Pick theme, card, photos, hook, and the hopeful turn. If `ig-kit/cards/<key>.jpg` is missing: `hf_fs attach <hf uri from cards.json>`; the result names a local file (`[Image: source: …]`) — copy it to `ig-kit/cards/<key>.jpg`. Look at the card image now. (For `four-of-wands`, confirm the image really is the Four of Wands; the dataset caption is wrong.)
+   - a. Load `tarot-post-craft` and follow it for the hook, slides and caption (`CONTENT_RULES.md` still wins). Pick theme, card, photos, hook, and the hopeful turn. If `ig-kit/cards/<key>.jpg` is missing: `hf_fs attach <hf uri from cards.json>`; the result names a local file (`[Image: source: …]`) — copy it to `ig-kit/cards/<key>.jpg`. Look at the card image now. (For `four-of-wands`, confirm the image really is the Four of Wands; the dataset caption is wrong.)
    - b. Write `instagram/<date>-<slug>/spec.json` (format, card, 4 slides; see the docstring in `render.py`) and `caption.txt`.
    - c. Lint: `python3 -I ig-kit/lint_ig.py --caption <dir>/caption.txt --spec <dir>/spec.json`. Fix and re-lint up to 3 times. If it still fails, create the row with the title "LINT FAIL — …" and the errors at the top of Run Log. Copy warnings into Run Log.
    - d. Render: `python3 -I ig-kit/render.py <dir>/spec.json <dir>`. For a Reel, set `"format": "reel"` in the spec, then `python3 -I ig-kit/reel.py <dir> <dir>/reel.mp4 <any seed>` (keep it under 15s: 4 slides ≈ 12s).
