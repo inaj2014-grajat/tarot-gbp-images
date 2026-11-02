@@ -65,6 +65,7 @@ Caption form: "DM TRUTH to ask Charu, so that you know. Just for yourself."
 - Every word visible in an image must be correct and readable. That includes card names printed in base photos. If a card label in a photo is small or garbled, don't use that photo. A blur patch over it looks worse than the problem.
 - All text must be easy to read on a phone, above all the English line. Rajat on a slide where it sat on bright garlands: "English is barely readable." `render.py` now keeps text on a dark band and stops with READABILITY FAIL below 4.5:1 contrast (3:1 for large text). Fix the placement or photo; never lower the limit.
 - Label lines need proper punctuation, e.g. "A kind ‘no’ is still love." not "A kind no is still love". Quote a word when it is being said, and end a full sentence with a full stop.
+- Keep text inside the Instagram frame. Rajat, 2 Nov 2026: "check for instagram borders.. run every post through emulator." `render.py` stops with FRAME FAIL if text is under 40 px from a side or 80 px from the top or bottom, and writes `phone.jpg`: the grid crop and each slide at Pixel 7 size. Look at `phone.jpg` before the row goes up for approval. Fix the spec; never lower the limits. It is a mock in phone mode, not the real app: no Android emulator can run here (no `adb`, no `/dev/kvm`).
 - Match the photo to the card when you can. A Card Insight post about Strength shouldn't show a different card if a better photo exists.
 
 ## 5. Photos and video

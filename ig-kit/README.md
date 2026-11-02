@@ -4,7 +4,8 @@ Used by the `tarot-ig-publisher` skill. Everything renders in a cloud workspace 
 
 | File | What it does |
 |---|---|
-| `render.py spec.json OUT/` | Carousel or Reel slides, 1080x1350 JPEG, plus `contact.jpg` for review |
+| `render.py spec.json OUT/` | Carousel or Reel slides, 1080x1350 JPEG, plus `contact.jpg` for review. For carousels, also `phone.jpg`; exit 3 = text outside the Instagram frame |
+| `phone_view.py POST_DIR out.jpg [slides...]` | Mock phone view of a carousel: 3:4 grid crop and each slide in the feed, in Chrome's Pixel 7 mode. Not the real app |
 | `reel.py OUT/ reel.mp4 [seed]` | 1080x1920 Reel from rendered slides, with an original synthesized track |
 | `music.py DUR CUTS out.wav [seed]` | Tanpura drone + pad + bells on each cut. No samples, no licensed audio |
 | `flowreel.py spec.json OUT/` | Series Reel from scenes (AI clip with timed text, chat bubbles, card end slides), fade-through-black, 2 s hold, brand music; checks the Instagram safe area, length and frame-1 text; writes `reel.mp4`, `contact.jpg`, `safezone.jpg`, `build.json` (exit 1 = do not publish) |

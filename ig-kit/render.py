@@ -20,7 +20,7 @@ Spec (all text fields: plain text, "\n" = line break; Devanagari is detected and
 }
 Writes OUTDIR/01-hook.jpg ... and OUTDIR/contact.jpg (all slides side by side, for review).
 """
-import html, json, pathlib, re, sys, urllib.request
+import html, json, pathlib, re, subprocess, sys, urllib.request
 import numpy as np
 from PIL import Image, ImageFilter, ImageDraw
 
@@ -245,6 +245,38 @@ READ_JS = """() => {
 }"""
 
 
+# Instagram frame limits for a 1080x1350 carousel slide.
+# The grid shows a centred 3:4 crop, which cuts 34 px from each side (measured on the live profile, 2 Nov 2026).
+# 40 px at the sides and 80 px at the top and bottom come from krumzi.com's carousel size guide.
+FRAME_SIDE = 40
+FRAME_END = 80
+FRAME_JS = """() => {
+  const out = [];
+  for (const el of document.querySelectorAll('body *')) {
+    if (el.closest('.brand,.num,.swipe') || el.tagName === 'SCRIPT') continue;  // fixed furniture, placed by the kit
+    for (const n of el.childNodes) {
+      if (n.nodeType !== 3 || !n.textContent.trim()) continue;
+      const r = document.createRange(); r.selectNodeContents(n);
+      const b = r.getBoundingClientRect();
+      out.push({text: n.textContent.trim().slice(0, 40), x0: b.left, x1: b.right, y0: b.top, y1: b.bottom});
+    }
+  }
+  return out;
+}"""
+
+
+def frame_problems(items, name):
+    """Input: text boxes in slide pixels, and the slide name. Output: one line for each box too close to an edge."""
+    probs = []
+    for it in items:
+        gaps = {"left": it["x0"], "right": W - it["x1"], "top": it["y0"], "bottom": H - it["y1"]}
+        limits = {"left": FRAME_SIDE, "right": FRAME_SIDE, "top": FRAME_END, "bottom": FRAME_END}
+        for edge, gap in gaps.items():
+            if gap < limits[edge]:
+                probs.append(f"{name}: '{it['text']}' is {gap:.0f} px from the {edge} edge, needs {limits[edge]}")
+    return probs
+
+
 def _lum(rgb):
     def f(c):
         c /= 255
@@ -309,12 +341,15 @@ def main():
     from playwright.sync_api import sync_playwright
     outs = []
     problems = []
+    frame = []
     with sync_playwright() as p:
         b = p.chromium.launch(); pg = b.new_page(viewport={"width": W, "height": H})
         for i, nm in enumerate(names, 1):
             pg.goto(f"file://{work / f'{i:02d}.html'}"); pg.wait_for_timeout(900)
             png = work / f"{nm}.png"
             pg.screenshot(path=str(png))
+            if spec.get("format") != "reel":
+                frame += frame_problems(pg.evaluate(FRAME_JS), nm)
             problems += check_readable(pg, nm)
             out = outdir / f"{nm}.jpg"
             Image.open(png).convert("RGB").save(out, quality=92)
@@ -327,11 +362,19 @@ def main():
         sheet.paste(im, (k * 444, 0))
     sheet.save(outdir / "contact.jpg", quality=88)
     print(outdir / "contact.jpg")
+    if spec.get("format") != "reel":
+        subprocess.run([sys.executable, "-I", str(KIT / "phone_view.py"), str(spec_path.parent), str(outdir / "phone.jpg")] + [str(o) for o in outs], check=True)
+    if frame:
+        print("FRAME FAIL (text too close to the edge of the Instagram frame; fix the spec, then re-render):")
+        for x in frame:
+            print(" -", x)
     if problems:
         print("READABILITY FAIL (fix the text placement or the photo, then re-render):")
         for x in problems:
             print(" -", x)
         sys.exit(2)
+    if frame:
+        sys.exit(3)
 
 
 if __name__ == "__main__":

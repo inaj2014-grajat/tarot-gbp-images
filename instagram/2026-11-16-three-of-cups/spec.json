@@ -28,9 +28,10 @@
    ],
    "fade": 100,
    "label": "LOOK CLOSER",
-   "head": "One cup is higher than the others.",
+   "head": "One cup is higher.",
    "sub": "The other two are still raising theirs.\nHer happiness takes nothing from yours.",
-   "head_px": 56
+   "head_px": 56,
+   "top": 1040
   },
   {
    "type": "message",
