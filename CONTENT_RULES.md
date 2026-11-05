@@ -2,7 +2,7 @@
 
 Read this file at the start of every draft and revise run, for Instagram and Google. These rules come from Rajat's own feedback, and they sit on top of each skill's brand canon. When a skill default conflicts with this file, this file wins. Add new rules here whenever Rajat rejects or reworks something, quoting his words, so the same rework never happens twice.
 
-Last updated: 2 Nov 2026.
+Last updated: 5 Nov 2026.
 
 ## 1. Every post ends on hope
 Every post and video, whatever the theme, must leave her feeling good, or hopeful that talking to Charu will help.
@@ -51,6 +51,19 @@ Avoid poetic metaphors about light, storms or shining. Be playful-warm and pract
 - So prefer short, punchy, parallel lines about her own life, choice or pace, over "your light / your glow" imagery.
 - Hindi is always in Devanagari, even single words. "zindagi" becomes ज़िंदगी.
 - Everyday English words stay in English, in Roman letters, even inside a Hindi line. Rajat rejected कज़िन: "I don't like cousin in Hindi. It's a common word so can be in English." So: "Cousin की शादी।"
+
+## 3b. Hindi must sound like real people talking (Rajat, 5 Nov 2026)
+Rajat rejected both "Kab badlega" Reels (#1 Temperance, #2 Pick a card): "I think the issue is with you Hindi messages. Doesn't look/sound real or common usage."
+
+The lines he rejected, so they aren't repeated:
+- "पता नहीं यार। पर कल का एक काम बता, साथ करते हैं।"
+- "पानी cup से cup तक। थोड़ा-थोड़ा भी बदलाव ही है।"
+- "जब मन पूछे, “कब बदलेगा?” तो कहना, “पता नहीं। पर आज 1, 2 या 3 तो चुन सकती हूँ।”"
+- "बिना लगाम, खुली बाँहें। थोड़ा ढीला छोड़ना भी ठीक है।"
+- "छड़ी पर नए पत्ते। शुरू करने की इजाज़त नहीं चाहिए।"
+- "तीन cup, एक साथ ऊपर। सब अकेले उठाना ज़रूरी नहीं।"
+
+Before any Hindi line goes in: would a woman in Delhi actually say or text this, in these words? A line that is an English thought translated into Hindi fails, and so does a card description written as Hindi poetry. New Hindi lines are not final until Rajat has seen them.
 
 ## 3a. The last slide must lead to Charu (Rajat, 2 Nov 2026)
 Rajat: "I am not sure how this is driving the viewer to Charu." So the last slide names Charu and gives a reason to message her. He also said its text was longer than he likes.
