@@ -1,12 +1,12 @@
-{"slug":"2026-11-07-kab-badlega-temperance","format":"reel","engine":"flowreel","card":"temperance","ai_generated":false,
+{"slug":"2026-11-07-kab-badlega-temperance","format":"reel","engine":"flowreel","card":"temperance","ai_generated":false,"output":"reel-r2.mp4",
  "scenes":[
-  {"type":"chat","dur":6.4,"steps":[
-    {"t":0,"from":"them","text":"यार, ये सब कब बदलेगा?","time":"11:47 PM"},
-    {"t":1.5,"typing":true},
-    {"t":2.2,"from":"me","text":"पता नहीं यार। पर कल का एक काम बता, साथ करते हैं।","time":"11:48 PM"}]},
-  {"type":"card","card":"temperance","dur":4.0,"label":"LOOK CLOSER","sub":"पानी cup से cup तक।<br>थोड़ा-थोड़ा भी बदलाव ही है।"},
-  {"type":"card","card":"temperance","dur":4.2,"label":"TEMPERANCE","sub":"Send this to the friend<br>who asks this every week.","cta":"DM “CLARITY”","line":"Charu can help you find your next small step."}],
+  {"type":"chat","dur":6.6,"steps":[
+    {"t":0,"from":"them","text":"सबकी life set है यार। बस मैं ही अटकी हूँ।","time":"11:47 PM"},
+    {"t":1.6,"typing":true},
+    {"t":2.3,"from":"me","text":"Instagram पर सबकी life set होती है। तू अपनी speed से चल।","time":"11:48 PM"}]},
+  {"type":"card","card":"temperance","dur":3.4,"label":"TEMPERANCE","sub":"Card ये नहीं बताता कि<br>सबकी life कैसी है।"},
+  {"type":"card","card":"temperance","dur":4.0,"label":"TEMPERANCE","sub":"ये बताता है कि तुम्हारा<br>अगला कदम क्या हो।","cta":"DM “CLARITY”","line":"Charu से पूछो।"}],
  "slides":[
-  {"type":"hook","head":"यार, ये सब कब बदलेगा?","sub":"पता नहीं यार। पर कल का एक काम बता, साथ करते हैं।"},
-  {"type":"card","title":"Temperance","sub":"पानी cup से cup तक। थोड़ा-थोड़ा भी बदलाव ही है।"},
-  {"type":"message","line":"Send this to the friend who asks this every week.","cta":"DM “CLARITY”"}]}
+  {"type":"hook","head":"सबकी life set है यार। बस मैं ही अटकी हूँ।","sub":"Instagram पर सबकी life set होती है। तू अपनी speed से चल।"},
+  {"type":"card","title":"Temperance","sub":"Card ये नहीं बताता कि सबकी life कैसी है।"},
+  {"type":"message","line":"ये बताता है कि तुम्हारा अगला कदम क्या हो। Charu से पूछो।","cta":"DM “CLARITY”"}]}

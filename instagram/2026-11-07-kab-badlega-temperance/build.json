@@ -1,12 +1,12 @@
 {
  "pass": true,
- "duration": 13.0,
+ "duration": 12.4,
  "cuts": [
-  1.5,
-  2.2,
-  6.0,
-  9.2
+  1.6,
+  2.3,
+  6.2,
+  8.8
  ],
  "problems": [],
- "output": "reel.mp4"
+ "output": "reel-r2.mp4"
 }
