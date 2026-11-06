@@ -1,14 +1,82 @@
-{"slug":"2026-11-11-kab-badlega-pick-a-card","format":"reel","engine":"flowreel","card":"the-sun","ai_generated":true,
- "flow":{"model":"Veo 3.1 - Fast","credits":20,"prompt":"Candid documentary style, natural and understated. Close overhead view of a dark green velvet cloth on a wooden table in a dim Indian home, a warm evening lamp to one side. Only the hands of an Indian woman in her late 30s, with one thin gold bangle, unhurriedly slide three plain dark-backed cards face down into a neat row, side by side with even gaps, then rest at the edge of the cloth. The cards stay face down the whole time and their backs are plain with no pattern. No face visible. Upper third of the frame darker. Slow, steady handheld camera. No text, no letters, no numbers, no logos, no screens anywhere. No sparkle, no glow. No music, no speech, only soft room sound.","source_clip":"clip.mp4","used":"clip-cut.mp4 = clip.mp4 from 3.0 s for 3.6 s (time trim only, frame not cropped)"},
- "scenes":[
-  {"type":"clip","src":"clip-cut.mp4","hold":0.4,"texts":[{"t":0,"text":"कब बदलेगा?<br><span style='font-size:70px'>Pause. Pick 1, 2 या 3.</span><br>&nbsp;<style>.rule{display:none}</style>","style":"hi"}]},
-  {"type":"card","card":"the-sun","dur":3.3,"label":"1 · THE SUN","sub":"बिना लगाम, खुली बाँहें।<br>थोड़ा ढीला छोड़ना भी ठीक है।"},
-  {"type":"card","card":"ace-of-wands","dur":3.3,"label":"2 · ACE OF WANDS","sub":"छड़ी पर नए पत्ते।<br>शुरू करने की इजाज़त नहीं चाहिए।"},
-  {"type":"card","card":"three-of-cups","dur":3.3,"label":"3 · THREE OF CUPS","sub":"तीन cup, एक साथ ऊपर।<br>सब अकेले उठाना ज़रूरी नहीं।"},
-  {"type":"text","dur":3.0,"head":"Comment your number.","sub":"DM “CLARITY”. Charu can help you see what your card means for you."}],
- "slides":[
-  {"type":"hook","head":"कब बदलेगा? Pause. Pick 1, 2 या 3."},
-  {"type":"card","title":"The Sun","sub":"बिना लगाम, खुली बाँहें। थोड़ा ढीला छोड़ना भी ठीक है।"},
-  {"type":"card","title":"Ace of Wands","sub":"छड़ी पर नए पत्ते। शुरू करने की इजाज़त नहीं चाहिए।"},
-  {"type":"card","title":"Three of Cups","sub":"तीन cup, एक साथ ऊपर। सब अकेले उठाना ज़रूरी नहीं।"},
-  {"type":"message","line":"Comment your number.","cta":"DM “CLARITY”"}]}
+{
+ "slug": "2026-11-11-kab-badlega-pick-a-card",
+ "format": "reel",
+ "engine": "flowreel",
+ "card": "the-sun",
+ "ai_generated": true,
+ "flow": {
+  "model": "Veo 3.1 - Fast",
+  "credits": 20,
+  "prompt": "Candid documentary style, natural and understated. Close overhead view of a dark green velvet cloth on a wooden table in a dim Indian home, a warm evening lamp to one side. Only the hands of an Indian woman in her late 30s, with one thin gold bangle, unhurriedly slide three plain dark-backed cards face down into a neat row, side by side with even gaps, then rest at the edge of the cloth. The cards stay face down the whole time and their backs are plain with no pattern. No face visible. Upper third of the frame darker. Slow, steady handheld camera. No text, no letters, no numbers, no logos, no screens anywhere. No sparkle, no glow. No music, no speech, only soft room sound.",
+  "source_clip": "clip.mp4",
+  "used": "clip-cut.mp4 = clip.mp4 from 3.0 s for 3.6 s (time trim only, frame not cropped)"
+ },
+ "scenes": [
+  {
+   "type": "clip",
+   "src": "clip-cut.mp4",
+   "hold": 0.4,
+   "texts": [
+    {
+     "t": 0,
+     "text": "कब बदलेगा?<br><span style='font-size:70px'>Pause. Pick 1, 2 या 3.</span><br>&nbsp;<style>.rule{display:none}</style>",
+     "style": "hi"
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "card": "the-sun",
+   "dur": 3.3,
+   "label": "1 · THE SUN",
+   "sub": "Plan फिर cancel हो गया?<br>आज अकेले ही निकल लो।"
+  },
+  {
+   "type": "card",
+   "card": "ace-of-wands",
+   "dur": 3.3,
+   "label": "2 · ACE OF WANDS",
+   "sub": "“Monday से शुरू करूँगी।”<br>कौन सा Monday? चलो, आज से।"
+  },
+  {
+   "type": "card",
+   "card": "three-of-cups",
+   "dur": 3.3,
+   "label": "3 · THREE OF CUPS",
+   "sub": "“I'm fine” बहुत हो गया।<br>उस friend को call कर लो।"
+  },
+  {
+   "type": "text",
+   "dur": 3.0,
+   "head": "Comment your number.",
+   "sub": "<span style='font-style:normal'>मतलब जानना है? Charu से पूछो।</span><br>DM “CLARITY”"
+  }
+ ],
+ "slides": [
+  {
+   "type": "hook",
+   "head": "कब बदलेगा? Pause. Pick 1, 2 या 3."
+  },
+  {
+   "type": "card",
+   "title": "The Sun",
+   "sub": "Plan फिर cancel हो गया? आज अकेले ही निकल लो।"
+  },
+  {
+   "type": "card",
+   "title": "Ace of Wands",
+   "sub": "“Monday से शुरू करूँगी।” कौन सा Monday? चलो, आज से।"
+  },
+  {
+   "type": "card",
+   "title": "Three of Cups",
+   "sub": "“I'm fine” बहुत हो गया। उस friend को call कर लो।"
+  },
+  {
+   "type": "message",
+   "line": "Comment your number. मतलब जानना है? Charu से पूछो।",
+   "cta": "DM “CLARITY”"
+  }
+ ],
+ "output": "reel-r2.mp4"
+}
