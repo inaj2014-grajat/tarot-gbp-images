@@ -63,6 +63,8 @@ The lines he rejected, so they aren't repeated:
 - "छड़ी पर नए पत्ते। शुरू करने की इजाज़त नहीं चाहिए।"
 - "तीन cup, एक साथ ऊपर। सब अकेले उठाना ज़रूरी नहीं।"
 
+On 6 Nov he added: "It's a bad Hindi text. Unrelatable, non captivating." So a line must also land on a moment she has lived (a boss, a group chat, a girls' night that keeps getting cancelled, comparing her life on Instagram), not on what the card looks like. Card imagery goes in the caption's card line, not in the Hindi. And when a post is marked Rejected with feedback, treat it as Changes Requested: a 6 Nov miss happened because Rejected rows were never reworked.
+
 Before any Hindi line goes in: would a woman in Delhi actually say or text this, in these words? A line that is an English thought translated into Hindi fails, and so does a card description written as Hindi poetry. New Hindi lines are not final until Rajat has seen them.
 
 ## 3a. The last slide must lead to Charu (Rajat, 2 Nov 2026)
