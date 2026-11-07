@@ -1,0 +1,48 @@
+{
+ "slug": "2026-11-13-two-of-swords",
+ "format": "carousel",
+ "card": "two-of-swords",
+ "slides": [
+  {
+   "type": "hook",
+   "name": "hook",
+   "photo": "bedroom-night",
+   "head": "रात के 2 बजे।\nMessage लिखा, delete किया।",
+   "sub": "What you feel is worth saying.\nMaybe just not at 2 AM.",
+   "head_px": 70
+  },
+  {
+   "type": "card",
+   "name": "card",
+   "title": "Two of Swords",
+   "sub": "The card of a choice on hold."
+  },
+  {
+   "type": "detail",
+   "name": "moon",
+   "box": [
+    580,
+    110,
+    1060,
+    590
+   ],
+   "fade": 100,
+   "label": "LOOK CLOSER",
+   "head": "The moon is still up.",
+   "sub": "It is still night in this card.\nThe answer can wait for morning.",
+   "head_px": 56,
+   "top": 1040
+  },
+  {
+   "type": "message",
+   "name": "message",
+   "photo": "balcony",
+   "layout": "top",
+   "quote": "सो जा। सुबह भी मन हो,\nतो भेज देना।",
+   "trans": "",
+   "line": "Charu से पूछो, ताकि तुम्हें पता हो।\nबस अपने लिये।",
+   "cta": "DM “TRUTH”",
+   "msg_label": "WHAT A FRIEND WOULD SAY"
+  }
+ ]
+}
