@@ -1,0 +1,10 @@
+{
+ "pass": true,
+ "duration": 12.6,
+ "cuts": [
+  2.2,
+  10.4
+ ],
+ "problems": [],
+ "output": "reel.mp4"
+}

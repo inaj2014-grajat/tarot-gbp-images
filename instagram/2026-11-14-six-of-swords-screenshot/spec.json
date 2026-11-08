@@ -1,0 +1,47 @@
+{
+ "slug": "2026-11-14-six-of-swords-screenshot",
+ "format": "reel",
+ "engine": "flowreel",
+ "card": "six-of-swords",
+ "ai_generated": false,
+ "scenes": [
+  {
+   "type": "text",
+   "dur": 2.6,
+   "head": "अटकने वाले दिन के लिये, screenshot कर लो।",
+   "sub": "Hold on. The card is next."
+  },
+  {
+   "type": "card",
+   "card": "six-of-swords",
+   "dur": 9.0,
+   "zoom": true,
+   "label": "SIX OF SWORDS",
+   "sub": "अगला कदम तुम्हारा है।<style>.card{max-height:740px}.sub{font-size:54px}</style>"
+  },
+  {
+   "type": "text",
+   "dur": 2.6,
+   "head": "Charu से बात कर लो।",
+   "sub": "<span style='font-style:normal'>DM “CLARITY”</span>"
+  }
+ ],
+ "slides": [
+  {
+   "type": "hook",
+   "head": "अटकने वाले दिन के लिये, screenshot कर लो।",
+   "sub": "Hold on. The card is next."
+  },
+  {
+   "type": "card",
+   "title": "Six of Swords",
+   "sub": "अगला कदम तुम्हारा है।"
+  },
+  {
+   "type": "message",
+   "line": "Charu से बात कर लो।",
+   "cta": "DM “CLARITY”"
+  }
+ ],
+ "output": "reel.mp4"
+}
