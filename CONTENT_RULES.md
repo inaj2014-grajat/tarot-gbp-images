@@ -9,13 +9,20 @@ Every post and video, whatever the theme, must leave her feeling good, or hopefu
 
 The shape is: name the tension lightly in the hook (that's what stops the scroll), then turn to warmth and possibility, and end with Charu as a warm invitation.
 
+Checklist for every post (added 9 Nov 2026): **Recognise → Relate → Reveal → Reassure → Respond.**
+- Recognise: the hook names a moment she has lived.
+- Relate: show you understand it, without judging her.
+- Reveal: the card. Its imagery goes in the caption's card line (§3b).
+- Reassure: the honest, card-led turn to hope. No forced positivity.
+- Respond: the last slide leads to Charu and the DM word (§3a).
+
 | Theme | Approved hopeful turn | Card used |
 |---|---|---|
 | Log Kya Kahenge (marriage and timeline questions) | "What if this year you chose you?" | The Star |
 | Guilt about saying no to family | "Saying no with love is still love." | Strength |
 | Invisible labour at work | "Your effort deserves to be seen." | Six of Wands |
 
-Prefer cards that carry hope (The Star, Strength, Six of Wands, The Sun, Ten of Cups, Ace of Cups, Three of Cups, Four of Wands, Temperance). A "hard" card (Ten of Wands, Four of Cups, Tower, Nine of Swords) can be used only if the post clearly turns it toward relief and hope.
+**Card choice (Rajat, 9 Nov 2026: "use the card that fits, then turn it to hope").** This replaces the earlier "prefer hopeful cards" rule. Pick the card that genuinely fits the situation, hard cards included (The Devil, Death, Tower, Ten of Wands, Four of Cups, Nine of Swords, Eight of Swords). Read it honestly, then turn the close toward perspective, agency, relief or hope, using what is really in the card (for example the loose chains in The Devil, or the sun rising between the towers in Death). The situation may be hard, but she must never be left feeling judged or helpless. Hopeful cards (The Star, Strength, Six of Wands, The Sun, Ten of Cups, Ace of Cups, Three of Cups, Four of Wands, Temperance) are still good choices when they fit; don't force one in when another card fits better.
 
 Never let hope become a prediction. "Your effort deserves to be seen" is allowed. "Your effort is about to be seen" is not.
 
@@ -38,6 +45,8 @@ What made this caption work:
 - **One short, concrete card line.** Name what is actually in the card.
 - **A send or save trigger tied to a real moment,** such as the family lunch.
 - **The DM trigger, followed by a warm promise of help from Charu.** Use "can help", never "will".
+
+**At most two calls to action per post (added 9 Nov 2026):** one share or save trigger, plus the DM word, as in the approved caption. Never ask her to comment, save, share and book in the same post.
 
 Rajat rejected two other versions:
 - A reflective, abstract version: "The Star comes after the storm… Your light and theirs can both shine. Neither has to dim."
@@ -82,6 +91,7 @@ Caption form: "DM TRUTH to ask Charu, so that you know. Just for yourself."
 - Label lines need proper punctuation, e.g. "A kind ‘no’ is still love." not "A kind no is still love". Quote a word when it is being said, and end a full sentence with a full stop.
 - Keep text inside the Instagram frame. Rajat, 2 Nov 2026: "check for instagram borders.. run every post through emulator." `render.py` stops with FRAME FAIL if text is under 40 px from a side or 80 px from the top or bottom, and writes `phone.jpg`: the grid crop and each slide at Pixel 7 size. Look at `phone.jpg` before the row goes up for approval. Fix the spec; never lower the limits. It is a mock in phone mode, not the real app: no Android emulator can run here (no `adb`, no `/dev/kvm`).
 - Match the photo to the card when you can. A Card Insight post about Strength shouldn't show a different card if a better photo exists.
+- **Reels: keep clear of the app's buttons (Rajat, 1 Nov 2026: "usually they get cutoff").** On 1080×1920 reels, keep all text, buttons and CTAs between y 270 and y 1250, and 65 px in from each side; below y 1150 keep text left of x 850 (the like/comment/share rail). Keep the cover's hook text between y 240 and y 1680 so the profile-grid crop doesn't cut it. Check every reel with the safe-zone overlay before delivery.
 
 ## 5. Photos and video
 - Rajat wants varied photos, not the same look each week. When the library is thin, get new text-free ones from the sources in §7, and add them to `ig-kit/photos/` and `photos.json` with tags.
@@ -99,6 +109,12 @@ On the 11 Nov Google post "How a Clarity Session Works" Rajat wrote: "the post i
 - Each post says one thing. Before writing, finish the sentence "This post tells her that…" in under 15 words, and cut anything that doesn't serve it.
 - Don't bolt a timely hook onto an explainer post if it pulls in a second idea. No hook is better than a muddled one.
 - Use concrete, everyday words for what happens ("you share your question", "you leave knowing what to do next"), not abstract tarot-speak ("energy", "patterns", "alignment") on its own.
+
+## 6b. Reply-time promises (Rajat, 9 Nov 2026)
+Charu can't always reply the same day. Never promise a same-day reply anywhere: slides, captions, Google posts, auto-replies or review replies. Use "within 24 hours" (24 घंटे के अंदर), and point to WhatsApp for a faster slot.
+
+## 6c. Sessions and prices (Rajat, 9 Nov 2026)
+Three options exist: a question-based reading for ₹400, a 30-minute Clarity Session for ₹1000 and a 60-minute Deep Guidance Session for ₹1500. All are online, across India, private and confidential. Use only these prices.
 
 ## 7. Where images and video come from (Rajat, 2 Nov 2026)
 **Never use Creative Claw.** Rajat: "I don't plan to use Creative Claw." Don't call its tools, even when they are connected to the run.
