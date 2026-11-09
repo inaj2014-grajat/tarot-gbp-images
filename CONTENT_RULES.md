@@ -2,7 +2,7 @@
 
 Read this file at the start of every draft and revise run, for Instagram and Google. These rules come from Rajat's own feedback, and they sit on top of each skill's brand canon. When a skill default conflicts with this file, this file wins. Add new rules here whenever Rajat rejects or reworks something, quoting his words, so the same rework never happens twice.
 
-Last updated: 5 Nov 2026.
+Last updated: 9 Nov 2026.
 
 ## 1. Every post ends on hope
 Every post and video, whatever the theme, must leave her feeling good, or hopeful that talking to Charu will help.
@@ -93,6 +93,12 @@ Caption form: "DM TRUTH to ask Charu, so that you know. Just for yourself."
 ## 6. How to handle Rajat's rework requests
 - When he says he doesn't like a caption or a line and gives no wording, give him 2–3 clearly different options with a recommendation. Don't send a single rewrite. In a scheduled run with no one to ask, write the options into Run Log, put option 1 in the row, and set Status to Pending Approval.
 - Read Notion page comments as well as the Feedback field. He often leaves feedback as a comment on the Status property.
+
+## 6a. One clear message per post (Rajat, 9 Nov 2026)
+On the 11 Nov Google post "How a Clarity Session Works" Rajat wrote: "the post is not clear on what it is trying to say." The draft stacked a festival opener ("After the Diwali rush…") on top of a process explainer, and used abstract lines ("we name the pattern… where your energy is going").
+- Each post says one thing. Before writing, finish the sentence "This post tells her that…" in under 15 words, and cut anything that doesn't serve it.
+- Don't bolt a timely hook onto an explainer post if it pulls in a second idea. No hook is better than a muddled one.
+- Use concrete, everyday words for what happens ("you share your question", "you leave knowing what to do next"), not abstract tarot-speak ("energy", "patterns", "alignment") on its own.
 
 ## 7. Where images and video come from (Rajat, 2 Nov 2026)
 **Never use Creative Claw.** Rajat: "I don't plan to use Creative Claw." Don't call its tools, even when they are connected to the run.
