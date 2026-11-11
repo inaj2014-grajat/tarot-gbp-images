@@ -2,7 +2,7 @@
 
 Read this file at the start of every draft and revise run, for Instagram and Google. These rules come from Rajat's own feedback, and they sit on top of each skill's brand canon. When a skill default conflicts with this file, this file wins. Add new rules here whenever Rajat rejects or reworks something, quoting his words, so the same rework never happens twice.
 
-Last updated: 9 Nov 2026.
+Last updated: 11 Nov 2026.
 
 ## 1. Every post ends on hope
 Every post and video, whatever the theme, must leave her feeling good, or hopeful that talking to Charu will help.
@@ -109,6 +109,7 @@ On the 11 Nov Google post "How a Clarity Session Works" Rajat wrote: "the post i
 - Each post says one thing. Before writing, finish the sentence "This post tells her that…" in under 15 words, and cut anything that doesn't serve it.
 - Don't bolt a timely hook onto an explainer post if it pulls in a second idea. No hook is better than a muddled one.
 - Use concrete, everyday words for what happens ("you share your question", "you leave knowing what to do next"), not abstract tarot-speak ("energy", "patterns", "alignment") on its own.
+- **Show a session through one real situation, not a process (Rajat, 11 Nov 2026).** The rev 2 rewrite of the same post was still a step-by-step explainer, and Rajat said again: "That post is not clear." Of three options he picked the one that opens on a single familiar dilemma ("Still Thinking About That Job Offer?") and shows the session through it. For "How a Session Works" posts, lead with one concrete decision she is stuck on, then what happens in the session, then how she feels after. Don't open on "Here is how it works".
 
 ## 6b. Reply-time promises (Rajat, 9 Nov 2026)
 Charu can't always reply the same day. Never promise a same-day reply anywhere: slides, captions, Google posts, auto-replies or review replies. Use "within 24 hours" (24 घंटे के अंदर), and point to WhatsApp for a faster slot.
