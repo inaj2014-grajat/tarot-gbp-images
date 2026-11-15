@@ -128,6 +128,7 @@ What he picked instead (Monday): "Doing Everything Right, Still Feeling Stuck?" 
 - Every post, Google included, opens on one concrete moment she has lived: the Sunday-night "Is this it?", the 2 AM replay, the message typed and deleted five times.
 - Image hooks are short and spoken, words she'd actually think (3–7 words). Not a mood ("Feeling lost?") or an abstract question ("What does clarity feel like?").
 - Drop a planet or festival opener if it doesn't sharpen that one moment.
+- The rev 2 rewrites for Wed and Fri ("Still replaying it at 2 AM?" around the review quote; "Before You Hit Send") were reworked again. Of 3 options each he picked: Wed "When You're Tired of Explaining Yourself" (review quote framed as the relief of being understood) and Fri "Sessions Open: The Question You Haven't Told Anyone" (privacy angle: "Ask it here, privately."). So lean on emotional truths she rarely hears said (being understood, a question she has told no one) over clever situation lists.
 
 ## 7. Where images and video come from (Rajat, 2 Nov 2026)
 **Never use Creative Claw.** Rajat: "I don't plan to use Creative Claw." Don't call its tools, even when they are connected to the run.
