@@ -2,7 +2,7 @@
 
 Read this file at the start of every draft and revise run, for Instagram and Google. These rules come from Rajat's own feedback, and they sit on top of each skill's brand canon. When a skill default conflicts with this file, this file wins. Add new rules here whenever Rajat rejects or reworks something, quoting his words, so the same rework never happens twice.
 
-Last updated: 11 Nov 2026.
+Last updated: 15 Nov 2026.
 
 ## 1. Every post ends on hope
 Every post and video, whatever the theme, must leave her feeling good, or hopeful that talking to Charu will help.
@@ -117,6 +117,17 @@ Charu can't always reply the same day. Never promise a same-day reply anywhere: 
 
 ## 6c. Sessions and prices (Rajat, 9 Nov 2026)
 Three options exist: a question-based reading for ₹400, a 30-minute Clarity Session for ₹1000 and a 60-minute Deep Guidance Session for ₹1500. All are online, across India, private and confidential. Use only these prices.
+
+## 6d. Specific, not generic; hooks that stop the scroll (Rajat, 15 Nov 2026)
+Rajat rejected all three Google drafts for 16–20 Nov ("I don't like any of those pending for approval posts"), and said they were **too vague / generic** and the **hooks were not catchy**. The rejected versions, so they aren't repeated:
+- "When You Feel Lost, Start With a Pause" / image "Feeling a little lost lately?" (opened on a mood, then a Sun-in-Vrischika line and The Hermit: two ideas, no real situation)
+- "In a Client's Own Words" / image "What does real clarity feel like?" (quote with no situation around it)
+- "Sessions Open: Keep One Hour for Yourself" / image "Is your calendar full of everyone else?" (general busyness)
+
+What he picked instead (Monday): "Doing Everything Right, Still Feeling Stuck?" with the image hook "Is this it?".
+- Every post, Google included, opens on one concrete moment she has lived: the Sunday-night "Is this it?", the 2 AM replay, the message typed and deleted five times.
+- Image hooks are short and spoken, words she'd actually think (3–7 words). Not a mood ("Feeling lost?") or an abstract question ("What does clarity feel like?").
+- Drop a planet or festival opener if it doesn't sharpen that one moment.
 
 ## 7. Where images and video come from (Rajat, 2 Nov 2026)
 **Never use Creative Claw.** Rajat: "I don't plan to use Creative Claw." Don't call its tools, even when they are connected to the run.
